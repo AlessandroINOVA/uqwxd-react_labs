@@ -86,7 +86,7 @@ align ="right" />
         <input type="checkbox" id="completed" checked={todo.completed} onChange={() => toggleComplete(todo.id)}>
         </input>
         {todo.id === todoEditing ? (
-        <input type="text" placeholder={todo.text} onChange={(e) => setEditingText(e.target.value)} />
+        <input type="text" placeholder={todo.text} defaultValue={todo.text} onChange={(e) => setEditingText(e.target.value)} />
         ) : (
         <span>{todo.text}</span>
         )}
